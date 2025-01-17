@@ -1,1 +1,1 @@
-# globaltime
+# globaltime now
