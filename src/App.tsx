@@ -109,6 +109,19 @@ function App() {
           </div>
         )}
 
+        {/* Google AdSense Block */}
+        <div className="mb-4">
+          <ins className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+            data-ad-slot="XXXXXXXXXX"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+          <script>
+            {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+          </script>
+        </div>
+
         <div className="relative mb-4">
           <Search className={`absolute left-3 top-2.5 w-5 h-5 ${
             isDarkMode ? 'text-slate-400' : 'text-slate-500'
@@ -176,3 +189,4 @@ function App() {
 };
 
 export default App;
+
