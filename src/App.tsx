@@ -9,6 +9,7 @@ import AddCityModal from './components/AddCityModal';
 import TimeZoneSelector from './components/TimeZoneSelector';
 import LocationInfo from './components/LocationInfo';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const { t } = useTranslation();
