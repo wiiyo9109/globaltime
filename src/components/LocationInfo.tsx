@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Thermometer } from 'lucide-react';
 import { format } from 'date-fns';
+import { useTranslation } from 'react-i18next';
 
 interface LocationData {
   city: string;
@@ -16,6 +17,7 @@ interface WeatherData {
 }
 
 const LocationInfo: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
+  const { t } = useTranslation();
   const [location, setLocation] = useState<LocationData | null>(null);
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [time, setTime] = useState(new Date());
@@ -142,7 +144,7 @@ const LocationInfo: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
             <div>
               <div className="text-xl font-semibold">{weather.temperature.toFixed(1)}°C</div>
               <p className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                {weather.description}
+                {t('weather.description')}
               </p>
             </div>
           </div>
